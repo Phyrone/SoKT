@@ -12,6 +12,7 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import java.io.Closeable
 import java.io.IOException
+import kotlin.reflect.KClass
 
 class SoKT(
     socket: Socket,
@@ -123,6 +124,9 @@ class SoKTBuilder {
         return ServerSoKT(socket, mapper, registeredPackets)
     }
 }
+
+fun SoKTBuilder.withPackets(vararg packets: Pair<Int, KClass<*>>): SoKTBuilder =
+    withPackets(*packets.map { pair -> Pair(pair.first, pair.second.java) }.toTypedArray())
 
 private data class PacketHead(
     val packetId: Int,
