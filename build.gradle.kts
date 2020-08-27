@@ -18,7 +18,7 @@ dependencies {
     val ktor_version = "1.3.2"
     api("io.ktor:ktor-network:$ktor_version")
     api("io.ktor:ktor-network-tls:$ktor_version")
-    val jacksonVersion = "2.10.3"
+    val jacksonVersion = "2.11.2"
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
     implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-protobuf:$jacksonVersion")
