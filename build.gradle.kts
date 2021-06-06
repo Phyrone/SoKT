@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    val ktor_version = "1.4.2"
+    val ktor_version = "1.6.0"
     api("io.ktor:ktor-network:$ktor_version")
     api("io.ktor:ktor-network-tls:$ktor_version")
     val jacksonVersion = "2.11.3"
